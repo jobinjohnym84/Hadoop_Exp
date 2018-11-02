@@ -27,9 +27,9 @@ export CLASSPATH=$CLASSPATH:$DERBY_HOME/lib/derby.jar:$DERBY_HOME/lib/derbytools
 
 # Create hive-env.sh and hive-site.xml files
 
-cd $HIVE_HOME/conf
-cp hive-default.xml.template hive-site.xml
-cp hive-env.sh.template hive-env.sh
+cd $HIVE_HOME/conf  
+cp hive-default.xml.template hive-site.xml  
+cp hive-env.sh.template hive-env.sh  
 
 # Edit the hive-env.sh file by appending the Hadoop path:
 export HADOOP_HOME=/usr/local/hadoop  
