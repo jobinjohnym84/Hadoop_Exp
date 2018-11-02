@@ -61,7 +61,7 @@ export HADOOP_HOME=/usr/local/hadoop
    3. Change the hive.metastore.schema.verification property value to false
 
 # Create a file named jpox.properties and add the following lines into it (sudo nano $HIVE_HOME/conf/jpox.properties)
-
+``` 
 javax.jdo.PersistenceManagerFactoryClass =  
 
 org.jpox.PersistenceManagerFactoryImpl  
