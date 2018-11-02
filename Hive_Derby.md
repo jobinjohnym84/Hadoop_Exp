@@ -80,7 +80,7 @@ javax.jdo.option.ConnectionURL = jdbc:derby://localhost:1527/metastore_db;create
 javax.jdo.option.ConnectionUserName = APP  
 javax.jdo.option.ConnectionPassword = mine  
 
-
+```
 
 # Specify to use derby as schema
 
