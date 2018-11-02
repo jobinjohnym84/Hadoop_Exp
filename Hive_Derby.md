@@ -38,15 +38,15 @@ export HADOOP_HOME=/usr/local/hadoop
 
  Three changes mainly-  
    1. Add below lines for the Derby connection  
-        
+        ```
         <property>
           <name>javax.jdo.option.ConnectionURL</name>  
           <value>jdbc:derby://localhost:1527/metastore_db;create=true </value>  
           <description>JDBC connect string for a JDBC metastore </description>  
         </property>
-    
-   2. Add below lines for the Derby connection 
-  
+     
+   2. Edit below lines for the Derby connection
+        ```
          <property>
            <name>hive.exec.local.scratchdir</name>
            <value>/tmp/${user.name}</value>
