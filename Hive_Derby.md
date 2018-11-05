@@ -113,4 +113,8 @@ hdfs dfsadmin -safemode leave
 
 It's not designed for Online transaction processing (OLTP), it is only used for the Online Analytical Processing (OLAP).   
 Hive supports overwriting or apprehending data, but not updates and deletes.  
-Sub-queries are not supported, in Hive  
+Sub-queries are not supported, in Hive    
+
+Just in cas of any permission issues related to the HIVE folder, please execute below command-
+
+sudo chmod -R 777 /home/superjjohny/hive
