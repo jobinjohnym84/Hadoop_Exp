@@ -18,6 +18,8 @@ Rename the folder as Hive
 
 # Download Derby
 
+Apache Derby is a relational database management system developed by the Apache Software Foundation that can be embedded in Java programs and used for online transaction processing. Derby is used to store the Schema of the Tables in HIVE.  
+
 wget http://us.mirrors.quenda.co/apache//db/derby/db-derby-10.14.2.0/db-derby-10.14.2.0-bin.tar.gz  
 tar zxvf db-derby-10.14.2.0-bin.tar.gz  
 Rename the folder as Derby  
