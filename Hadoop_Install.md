@@ -17,6 +17,7 @@ tar xfz hadoop-2.8.3.tar.gz
 
 3. Update the BASHRC file (sudo nano .bashrc)  
 
+``` 
 export HADOOP_PREFIX=/home/jobin/hadoop-2.9.0
 export HADOOP_HOME=/home/jobin/hadoop-2.9.0
 export HADOOP_MAPRED_HOME=${HADOOP_HOME}
@@ -32,9 +33,10 @@ export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
 export PATH=$PATH:$HADOOP_HOME/
 export PATH=$PATH:$HADOOP_HOME/bin
 
-
+``` 
 4. Update the BASH_PROFILE (sudo nano bash_profile)  
 
+``` 
 ## JAVA env variables
 export JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk-1.7.0.141-2.6.10.5.el7.x86_64
 export PATH=$PATH:$JAVA_HOME/bin
@@ -49,9 +51,11 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 
+``` 
 
 5. Edit the core-site.xml  
 
+``` 
 <configuration>
 
 <property>
@@ -67,7 +71,7 @@ export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 
 </configuration>
 
-
+``` 
 6. Create namenode and datanode folders   
 
 mkdir -p namenode  
@@ -75,7 +79,7 @@ mkdir -p datanode
 
 
 7. Edit the HDFS Site.xml  nano hadoop-2.9.0/etc/hadoop/hdfs-site.xml  
-
+``` 
 <configuration>
 
 <property>
@@ -92,9 +96,9 @@ mkdir -p datanode
 </property>
 </configuration>
 
-
+``` 
 8. Edit  nano hadoop-2.9.0/etc/hadoop/mapred-site.xml  
-
+``` 
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
@@ -104,10 +108,10 @@ mkdir -p datanode
 </property>
 </configuration>
 
-
+``` 
 9. Edit nano hadoop-2.9.0/etc/hadoop/yarn-site.xml  
 
-
+``` 
 <configuration>
 
 <!-- Site specific YARN configuration properties -->
@@ -140,5 +144,5 @@ mkdir -p datanode
 
 </configuration>
 
-
+``` 
 10. 
