@@ -1,3 +1,9 @@
+# Why HIVE-
+
+Apache Hive is an open source data warehouse system built on top of Hadoop Haused for querying and analyzing large datasets stored in HDFS. Initially, you have to write complex Map-Reduce jobs, but now with the help of Hive, you just need to submit merely SQL queries. Hive is mainly targeted towards users who are comfortable with SQL. Hive use language called HiveQL (HQL), which is similar to SQL. HiveQL automatically translates SQL-like queries into MapReduce jobs.
+
+Lets talk about the HIVE setup on top of existing Hadoop cluster-
+
 # Create HDFS Directories first-
 
 hadoop fs -mkdir /user/hive  
@@ -100,3 +106,9 @@ show tables;
 I have attached the hive-env.sh , hive-site.xml and jpox.properties  
 
 hdfs dfsadmin -safemode leave
+
+# HIVE cannot perform- 
+
+It's not designed for Online transaction processing (OLTP), it is only used for the Online Analytical Processing (OLAP).   
+Hive supports overwriting or apprehending data, but not updates and deletes.  
+Sub-queries are not supported, in Hive  
