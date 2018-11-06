@@ -118,3 +118,9 @@ Sub-queries are not supported, in Hive
 Just in cas of any permission issues related to the HIVE folder, please execute below command-
 
 sudo chmod -R 777 /home/superjjohny/hive
+
+# Admin role creation
+
+Add hive.users.in.admin.role property to hive-site.xml, with comma-separated list of users as value.  
+Log on as that user.Run "set role admin" command.  verify using show roles;  
+
