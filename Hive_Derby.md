@@ -124,3 +124,28 @@ sudo chmod -R 777 /home/superjjohny/hive
 Add hive.users.in.admin.role property to hive-site.xml, with comma-separated list of users as value.  
 Log on as that user.Run "set role admin" command.  verify using show roles;  
 
+# Sample Scripts
+
+CREATE DATABASE ts_db;  
+Use ts_db;  
+show databases;  
+show tables;  
+
+hadoop fs -mkdir /names  
+hadoop fs -copyFromLocal /home/superjjohny/Tested.csv /names/Tested.csv  
+
+``` 
+CREATE EXTERNAL TABLE IF NOT EXISTS Names_text(
+     EmployeeID INT,FirstName STRING, Title STRING,
+     State STRING, Laptop STRING)
+     COMMENT 'Employee Names'
+     ROW FORMAT DELIMITED
+     FIELDS TERMINATED BY ','
+     STORED AS TEXTFILE
+     LOCATION '/names';
+     
+``` 
+select [every column], count(*)
+from mytable
+group by [every column]
+having count( * ) > 1;
