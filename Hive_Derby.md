@@ -149,3 +149,11 @@ select [every column], count(*)
 from mytable
 group by [every column]
 having count( * ) > 1;
+
+ select employeeid from names_text group by employeeid having count(*) >1;  
+ 
+ The above command will trigger the MapReduce Job, but I dont know where the results are getting stored.
+ 
+ So use the following command ( ***** MAKE SURE YOU USE A NEW FOLDER OTHERWISE THIS WILL WIPE EVRYTHING OUT ****** )
+ 
+  INSERT OVERWRITE LOCAL DIRECTORY '/home/superjjohny/Hive_output/' ROW FORMAT DELIMITED FIELDS TERMINATED BY ','   select distinct employeeid from names_text;
