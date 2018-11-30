@@ -157,3 +157,11 @@ having count( * ) > 1;
  So use the following command ( ***** MAKE SURE YOU USE A NEW FOLDER OTHERWISE THIS WILL WIPE EVRYTHING OUT ****** )
  
   INSERT OVERWRITE LOCAL DIRECTORY '/home/superjjohny/Hive_output/' ROW FORMAT DELIMITED FIELDS TERMINATED BY ','   select distinct employeeid from names_text;
+
+Find the space of folders HDFS
+
+hadoop fs -du -s -h /path/to/dir
+
+Please include a wildcard character * after the desired folder you want to delete, to avoid deleting the parent folder. Please look at the example below:
+
+hdfs dfs -rm -r /home/user/folder/*
