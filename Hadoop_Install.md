@@ -146,3 +146,20 @@ mkdir -p datanode
 
 ``` 
 10. 
+
+
+
+
+
+
+# Troubleshooting
+
+
+nano hadoop-2.9.0/etc/hadoop/hadoop-env.sh
+
+hadoop-2.9.0/sbin/start-dfs.sh
+hadoop-2.9.0/sbin/start-yarn.sh
+
+
+
+
